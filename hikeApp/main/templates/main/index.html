@@ -10,5 +10,15 @@
          background-repeat: no-repeat;
          background-image: url("https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?cs=srgb&dl=pexels-andreimike-1271619.jpg&fm=jpg");
         }
+
  </style>
+<div class="places">
+  {% for place in places %}
+    <div class="place-card">
+      <h3>{{ place.name }}</h3>
+      <p>{{ place.address }}</p>
+      <img src="{{ place.image.url }}" alt="{{ place.name }}"  class="place-image" >
+    </div>
+  {% endfor %}
+</div>
 {% endblock %}
