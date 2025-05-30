@@ -1,38 +1,43 @@
 .loginbutton{
-    display: inline-block;
     color: white;
     padding: 3px 7px;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    position: fixed;
     top: 17px;
-    right: 150px;
+    right: 160px;
+    position: absolute;
 
 }
 
 .signupbutton {
-     display: inline-block;
+    position: absolute;
     color: white;
     padding: 3px 7px;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    position: fixed;
     top: 17px;
-    right: 60px;
+    right: 50px;
 
 }
 
-.header {
+.header-link{
+    position: absolute;
+    top: 17px;
     color: white;
     text-decoration: none;
+}
+
+.site-header {
+    display: inline-block;
+    font-family: "Source Code Pro", monospace;
 }
 
 .nav {
   list-style: none;
   display: flex;
-  gap: 60px;
+  gap: 120px;
   padding: 1px;
     position: absolute;
     left:55%;
@@ -76,14 +81,24 @@
 }
 
 .place-card {
-  max-width: 300px;
+  max-width: 700px;
   margin-bottom: 300px;
   padding: 15px;
-  text-align: center;    /* центровання тексту */
+  text-align: center;
 }
 
 .place-image {
-  width: 30%;
-  height: 30%;
+    max-width: 100%;
+  width: 100%;
+  height: 350px;
+
+}
+
+.places {
+    position: absolute;
+    bottom: -62%;
+    left: 3%;
+    gap: 50px;
+    display: flex;
 
 }
