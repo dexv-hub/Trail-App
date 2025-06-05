@@ -5,3 +5,4 @@ def index(request):
     places = Place.objects.all()
     return render(request, 'main/index.html', {'places': places})
 
+

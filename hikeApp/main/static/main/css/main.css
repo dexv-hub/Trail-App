@@ -81,11 +81,27 @@
 }
 
 .place-card {
-  max-width: 700px;
+  max-width: 300px;
   margin-bottom: 300px;
   padding: 15px;
   text-align: center;
 }
+
+.fontmain {
+    font-family: "Source Code Pro", monospace;
+    font-size: 16px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.fontaddress {
+    font-size: 12px;
+}
+
+.fontdesc {
+    font-size: 12px;
+}
+
 
 .place-image {
     max-width: 100%;

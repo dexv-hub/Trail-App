@@ -16,9 +16,9 @@
   {% for place in places %}
     <div class="place-card">
       <img src="{{ place.image.url }}" alt="{{ place.name }}"  class="place-image" >
-        <h3>{{ place.name }}</h3>
-        <p>{{ place.address }}</p>
-        <p>{{ place.description}}</p>
+        <h3 class="fontmain">{{ place.name }}</h3>
+        <p class="fontaddress">{{ place.address }}</p>
+        <p class="fontdesc">{{ place.description}}</p>
     </div>
   {% endfor %}
 </div>
