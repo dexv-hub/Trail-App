@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-  
-</body>
-</html>
+{% extends 'main/layout.html' %}
+{% block content %}
+
+  <h2>Вхід</h2>
+  <form method="post">
+      {% csrf_token %}
+      {{ form.username }}
+      {{ form.password  }}
+      <button type="submit">Увійти</button>
+  </form>
+
+  {% if form.errors %}
+      <p style="color:red;">Невірне ім’я користувача або пароль</p>
+  {% endif %}
+
+{% endblock %}
