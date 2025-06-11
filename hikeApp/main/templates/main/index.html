@@ -15,7 +15,7 @@
 <div class="places">
   {% for place in places %}
     <div class="place-card">
-      <img src="{{ place.image.url }}" alt="{{ place.name }}"  class="place-image" >
+        <a href="{% url 'place_detail' place.slug %}" ><img src="{{ place.image.url }}" alt="{{ place.name }}"  class="place-image" ></a>
         <h3 class="fontmain">{{ place.name }}</h3>
         <p class="fontaddress">{{ place.address }}</p>
         <p class="fontdesc">{{ place.description}}</p>

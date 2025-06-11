@@ -1,0 +1,8 @@
+
+{% extends 'main/layout.html' %}
+{% block content %}
+    <h1 class="name">{{ place.name }}</h1>
+    <p class="startpoint"><strong>Start point:</strong> {{ place.address }}</p>
+    <p class="difficulty" ><strong>Difficulty:</strong> {{ place.description }}</p>
+    <p class="trails"> {{ place.trails }} </p>
+{% endblock %}

@@ -5,6 +5,7 @@ class Place(models.Model):
     address = models.CharField(max_length=50)
     image = models.ImageField(upload_to='places/')
     description = models.CharField(max_length=100)
+    trails = models.TextField()
     slug = models.SlugField(unique=True)
 
     def __str__(self):
