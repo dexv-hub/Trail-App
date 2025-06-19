@@ -128,3 +128,18 @@
 .name, .difficulty, .startpoint{
     padding-left: 10%;
 }
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.weather-forecast {
+    padding-top: 77%;
+    padding-left: 8%;
+    font-size: 24px;
+    font-weight: bold;
+}

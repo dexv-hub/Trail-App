@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import RegistrationForm
-from django.contrib import messages
+from django.contrib import messages, auth
 
 
 def signup(request):
@@ -16,3 +16,7 @@ def signup(request):
 
 def login(request):
     return render(request, "Users/login.html")
+
+def logout(request):
+    auth.logout(request)
+    return redirect('home')

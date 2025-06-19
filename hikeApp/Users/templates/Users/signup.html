@@ -1,8 +1,37 @@
 {% extends 'main/layout.html'%}
 {% block content %}
 <form class="regform" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Зареєструватись</button>
+              <form action="{% url 'signup' %}" method="post" class="regform">
+
+                  {% csrf_token %}
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="{{ form.username.id_for_label }}">Your username</label>
+                  {{ form.username }}
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="{{ form.email.id_for_label }}">Your Email</label>
+                    {{ form.email }}
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="{{ form.password1.id_for_label }}">Password</label>
+                    {{ form.password1 }}
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="{{ form.password2.id_for_label }}">Repeat your password</label>
+                    {{ form.password2 }}
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button  type="submit" class="">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="{% url 'login' %}"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
 </form>
 {% endblock %}
