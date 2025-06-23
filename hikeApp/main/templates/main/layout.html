@@ -33,7 +33,7 @@
       <ul class="reg">
             {% if user.is_authenticated %}
                 <a href="{% url 'logout' %}" class="loginbutton">Log out </a>
-                <a href="" class="signupbutton">My profile</a>
+                <a href="{% url 'profile' %}" class="signupbutton">My profile</a>
             {% else %}
                 <a href="{% url 'login' %}" class="loginbutton">Log in</a>
                 <a href="{% url 'signup' %}" class="signupbutton">Sign up</a>

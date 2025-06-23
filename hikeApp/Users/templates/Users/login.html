@@ -2,20 +2,29 @@
 {% block content %}
 
 <div class="container">
-  <form  method="post">
-      {% csrf_token %}
-      <h2>Вхід</h2>
-      <div data-mdb-input-init class="form-outline mb-4">
-          <label class="form-label" for="{{ form.username.id_for_label }}">Username</label>
-          {{ form.username }}
-      </div>
+  <form method="post">
+    {% csrf_token %}
+    <div class="container1">
+      <div class="login form">
+        <header>Login</header>
 
-      <div data-mdb-input-init class="form-outline mb-4">
-          <label class="form-label" for="{{ form.email.id_for_label }}">Passwordl</label>
-          {{ form.password }}
-      </div>
-      <button type="submit">Увійти</button>
+        {{ form.non_field_errors }}
+        {{ form.username.errors }}
+        <input type="text" name="username" placeholder="Enter your username">
 
+        {{ form.password.errors }}
+        <input type="password" name="password" placeholder="Enter your password">
+
+        <a href="#">Forgot password?</a>
+
+        <input type="submit" class="button" value="Login">
+        <div class="signup">
+          <span>Don't have an account?
+            <a href="{% url 'signup' %}">Signup</a>
+          </span>
+        </div>
+      </div>
+    </div>
   </form>
 </div>
   {% if form.errors %}

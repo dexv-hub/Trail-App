@@ -23,7 +23,22 @@
 
   {% endfor %}
 </div>
-    <div class="weather-forecast">
-            <p>When to visit</p>
+
+<div class="weather-forecast">
+    <p>When to visit</p>
+<ul>
+    <div class="weather-grid">
+      {% for day in forecasts %}
+        <li class="weather-data">
+          Дата: {{ day.time|slice:":10" }}
+          Degrees: {{ day.values.temperatureMax }}°C,
+          {{ day.values.temperatureMin }}°C,
+          Wind Speed : {{ day.values.windSpeedAvg }}
+        </li>
+      {% empty %}
+        <li>Немає даних про погоду</li>
+      {% endfor %}
+    </div>
+</ul>
     </div>
 {% endblock %}
