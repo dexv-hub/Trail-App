@@ -162,6 +162,16 @@
   padding: 10px;
 }
 
+
+
+
+
+
+
+
+
+
+
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
@@ -247,4 +257,25 @@ body1{
 .signup label{
   color: #009579;
   cursor: pointer;
+}
+
+
+
+
+
+.registration.form {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+
+}
+
+.bodyforreg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        height: 100vh;
 }
